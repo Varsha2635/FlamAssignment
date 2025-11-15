@@ -10,7 +10,7 @@ function generateUserId() {
 export function useDrawingSync() {
   const [strokes, setStrokes] = useState([]);
   const [userId] = useState(() => generateUserId());
-  const [activeUsers, setActiveUsers] = useState([userId]); // Only you for now
+  const [activeUsers] = useState([userId]); // Only you for now
 
   useEffect(() => {
     // Load from local memory (optional)
@@ -43,4 +43,5 @@ export function useDrawingSync() {
     userId
   };
 }
+
 
